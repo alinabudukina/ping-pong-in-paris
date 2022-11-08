@@ -1,9 +1,22 @@
 import { type NextPage } from "next";
+import Map from "../component/Map";
 
 import { trpc } from "../utils/trpc";
+import dynamic from "next/dynamic";
 
 const Home: NextPage = () => {
-  return <div className="text-2xl">Hello world</div>;
+  const MyAwesomeMap = dynamic(() => import("../component/Map"), {
+    ssr: false,
+  });
+
+  return (
+    <>
+      <div className="border-slate-200 flex flex-row items-center justify-between border-b bg-coral p-3">
+        Ping Pong in Paris
+      </div>
+      <MyAwesomeMap />
+    </>
+  );
 };
 
 export default Home;
