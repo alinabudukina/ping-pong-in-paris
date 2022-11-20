@@ -1,5 +1,4 @@
 import { type NextPage } from "next";
-import Map from "../component/Map";
 
 import { trpc } from "../utils/trpc";
 import dynamic from "next/dynamic";
