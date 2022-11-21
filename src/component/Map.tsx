@@ -15,8 +15,16 @@ export default function Map() {
       location: "11 Rue du Colonel Rozanoff, 75012",
       lat: 48.8446,
       lon: 2.387,
+      position: "external",
       description:
         "A nice park with 2 ping-pong tables and a place for petanque",
+    },
+    {
+      spotName: "Square",
+      location: "11 Rue du Colonel Rozanoff, 75012",
+      lat: 48.8446,
+      lon: 2.387,
+      position: "external",
     },
   ];
 
@@ -45,6 +53,7 @@ export default function Map() {
             <br />
             <p>{item.location}</p>
             <p>{item.description}</p>
+            <p>{item.position}</p>
           </Popup>
         </Marker>
       ))}
