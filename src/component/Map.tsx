@@ -12,19 +12,19 @@ export default function Map() {
   const listOfTables: PingPongTables[] = [
     {
       spotName: "Square Saint-Éloi",
+      spotType: "outdoor",
       location: "11 Rue du Colonel Rozanoff, 75012",
       lat: 48.8446,
       lon: 2.387,
-      position: "external",
       description:
         "A nice park with 2 ping-pong tables and a place for petanque",
     },
     {
-      spotName: "Square",
-      location: "11 Rue du Colonel Rozanoff, 75012",
-      lat: 48.8446,
-      lon: 2.387,
-      position: "external",
+      spotName: "Square Philippe-Farine",
+      spotType: "outdoor",
+      location: "12 Passage Gatbois, 75012",
+      lat: 48.84445,
+      lon: 2.3791,
     },
   ];
 
@@ -53,7 +53,7 @@ export default function Map() {
             <br />
             <p>{item.location}</p>
             <p>{item.description}</p>
-            <p>{item.position}</p>
+            <p>{item.spotType}</p>
           </Popup>
         </Marker>
       ))}
