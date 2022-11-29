@@ -1,9 +1,18 @@
-import { router } from "../trpc";
-import { exampleRouter } from "./example";
+import { z } from "zod";
+
+import { router, publicProcedure } from "../trpc";
 
 export const appRouter = router({
-  example: exampleRouter,
+  hello: publicProcedure
+    .input(z.object({ text: z.string().nullish() }).nullish())
+    .query(({ input }) => {
+      return {
+        greeting: `Hello ${input?.text ?? "world"}`,
+      };
+    }),
+  getAll: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.example.findMany();
+  }),
 });
-
 // export type definition of API
 export type AppRouter = typeof appRouter;

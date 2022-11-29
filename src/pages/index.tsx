@@ -8,12 +8,17 @@ const Home: NextPage = () => {
     ssr: false,
   });
 
+  const { data, isLoading } = trpc.hello.useQuery({ text: "YOU" });
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <div className="border-slate-200 flex flex-row items-center justify-between bg-gray p-3 font-minipax text-coral">
-        Ping Pong in Paris
+        {data?.greeting}
       </div>
-      <div className="bg-white px-3 pb-1 pt-10 text-center ">
+      <div className="bg-white px-7 pb-1 pt-10 text-center ">
         <MyAwesomeMap />
       </div>
     </>
