@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Poppins";
+@font-face {
+  font-family: "Minipax";
+  src: url("../styles/fonts/Minipax-Regular.ttf");
 }
 
 .leaflet-container {
-  height: 650px;
+  height: 550px;
 }
 
 .ping-pong-icon {
@@ -17,7 +18,6 @@
 }
 
 .ping-pong-icon:after {
-  display: block;
   width: 30px;
   height: 30px;
   content: "🏓";

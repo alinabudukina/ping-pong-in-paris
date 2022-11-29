@@ -10,10 +10,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="border-slate-200 flex flex-row items-center justify-between border-b bg-coral p-3">
+      <div className="border-slate-200 flex flex-row items-center justify-between bg-gray p-3 font-minipax text-coral">
         Ping Pong in Paris
       </div>
-      <MyAwesomeMap />
+      <div className="bg-white px-3 pb-1 pt-10 text-center ">
+        <MyAwesomeMap />
+      </div>
     </>
   );
 };
