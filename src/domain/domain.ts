@@ -1,8 +1,15 @@
+import { LatLngExpression, LatLngTuple } from "leaflet";
+
 export interface PingPongTables {
-  spotName: string;
-  spotType: string;
-  location: string;
-  lat: number;
-  lon: number;
-  description?: string;
+  type: string;
+  geometry: {
+    type: string;
+    coordinates: LatLngExpression;
+  };
+  properties: {
+    spotName: string;
+    spotType: string;
+    location: string;
+    description?: string;
+  };
 }
