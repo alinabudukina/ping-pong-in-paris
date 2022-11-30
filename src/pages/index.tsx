@@ -16,6 +16,11 @@ const Home: NextPage = () => {
       <div className="bg-white px-3 pb-1 pt-10 text-center ">
         <MyAwesomeMap />
       </div>
+      <div className="bg-white px-3 pb-1 pt-10 text-center ">
+        <button className="bg-transparent focus:shadow-xs inline-flex h-16 cursor-pointer select-none items-center justify-center rounded-full border-2 border-solid border-coral px-10 py-0 text-center align-middle text-xl font-semibold text-coral no-underline transition-all duration-300 ease-in-out hover:border-dark-gray hover:text-dark-gray focus:no-underline">
+          Add a table
+        </button>
+      </div>
     </>
   );
 };
